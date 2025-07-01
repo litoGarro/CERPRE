@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red de Rehabilitación en la Provincia de San Luis</title>
+    <title>Capacitación - CERPRE San Luis</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
             background-position: center center;
             position: relative;
             min-height: 100vh;
-            color: #333;
+            color: #1f2937; /* Un gris oscuro para el texto principal */
         }
         /* Capa para efecto de marca de agua */
         body::before {
@@ -27,98 +27,120 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(255, 255, 255, 0.85); /* Opacidad ajustada para el efecto */
+            background-color: rgba(255, 255, 255, 0.85); /* Opacidad ligeramente reducida para más contraste */
             z-index: -1;
         }
+        /* Sombra de texto para mejorar legibilidad */
+        .text-readable {
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+        }
         .calendar-day {
-            @apply p-2 text-center border border-gray-200 rounded-md cursor-pointer transition-all duration-200;
+            @apply p-2 text-center border border-gray-300 rounded-md cursor-pointer transition-all duration-200 bg-white/50;
         }
         .calendar-day:hover {
-            @apply bg-teal-100;
+            @apply bg-yellow-100/80;
         }
         .calendar-day.current-month {
-            @apply bg-teal-50 text-teal-800;
+            @apply bg-green-50/60 text-green-900;
         }
         .calendar-day.wednesday {
-            @apply bg-emerald-200 text-emerald-800 font-semibold cursor-pointer shadow-md;
+            @apply bg-yellow-300/90 text-yellow-900 font-semibold cursor-pointer shadow-md;
         }
         .calendar-day.wednesday:hover {
-            @apply bg-emerald-300 transform scale-105;
+            @apply bg-yellow-400/90 transform scale-105;
         }
         .calendar-day.inactive {
-            @apply text-gray-400 bg-gray-50 cursor-not-allowed;
+            @apply text-gray-400 bg-gray-200/50 cursor-not-allowed;
         }
     </style>
 </head>
 <body class="flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8">
 
-    <header class="w-full max-w-6xl text-center mb-10 p-6 bg-teal-500 text-white rounded-xl shadow-lg">
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Red de Rehabilitación en la Provincia de San Luis</h1>
+    <header class="w-full max-w-6xl text-center mb-10 p-6 bg-gradient-to-r from-yellow-400 via-orange-500 to-green-500 text-white rounded-xl shadow-lg">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-readable">CERPRE - Centro de Referencia Provincial en Rehabilitación</h1>
     </header>
 
-    <main class="w-full max-w-6xl flex flex-col lg:flex-row gap-8">
+    <main class="w-full max-w-5xl flex flex-col gap-8">
 
-        <!-- Sección Izquierda: Texto de Invitación -->
-        <section class="flex-1 bg-slate-100/80 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-200">
-            <h2 class="text-2xl sm:text-3xl font-bold text-sky-800 mb-6">Invitación a colaborar en la Capacitación</h2>
-            <p class="text-gray-700 leading-relaxed text-lg">
-                Se invita cordialmente a profesionales de la salud, tanto del ámbito público como privado, a participar en nuestras actividades de capacitación. Nuestro objetivo es informar sobre las últimas novedades y técnicas en rehabilitación, facilitando el acercamiento de la Salud Pública a todas las localidades de la provincia de San Luis. Juntos, podemos fortalecer la red de rehabilitación y mejorar la calidad de vida de nuestros ciudadanos. ¡Su conocimiento y experiencia son invaluables para esta iniciativa!
+        <!-- Sección de Contenido Principal (Fondo transparente) -->
+        <section class="p-8 rounded-xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-orange-600 mb-4 text-readable">Capacitación y Formación Continua para Profesionales</h2>
+            <p class="text-2xl font-semibold text-gray-800 mb-6 text-readable">Liderando el futuro de la rehabilitación en San Luis</p>
+
+            <p class="text-gray-900 leading-relaxed mb-6 font-medium">
+                En el Centro de Referencia Provincial en Rehabilitación (CERPRE), entendemos que la excelencia en la atención al paciente nace del conocimiento, la actualización constante y la colaboración profesional. Bajo la dirección del Dr. Diego Gandara, nos comprometemos a ser el epicentro de la formación de vanguardia para todos los profesionales de la salud involucrados en el proceso de rehabilitación en nuestra provincia.
             </p>
+            <p class="text-gray-900 leading-relaxed mb-8 font-medium">
+                Nuestro objetivo es consolidarnos como un referente de salud en la región, brindando herramientas prácticas y actualizando los conocimientos de quienes día a día trabajan para mejorar la calidad de vida de los sanluiseños.
+            </p>
+
+            <div class="p-6 rounded-lg border-2 border-green-500/50">
+                <h3 class="text-2xl font-bold text-green-700 mb-4 text-readable">Programa Anual de Capacitación Virtual 2026</h3>
+                <p class="text-gray-800 mb-6">Hemos diseñado un programa de formación continua, flexible y de alto impacto, pensado exclusivamente para los profesionales de la salud de San Luis.</p>
+                <ul class="space-y-3 text-gray-800">
+                    <li><span class="font-semibold text-green-800">Modalidad:</span> 100% virtual a través de la plataforma Google Meet.</li>
+                    <li><span class="font-semibold text-green-800">Frecuencia:</span> Jornadas semanales de una (1) hora de duración.</li>
+                    <li><span class="font-semibold text-green-800">Dirigido a:</span> Kinesiólogos, Trabajadores Sociales, Psicólogos, Médicos Fisiatras, Terapistas Ocupacionales, Fonoaudiólogos, Musicoterapeutas y demás profesionales del equipo de salud.</li>
+                </ul>
+            </div>
+
+            <div class="mt-8">
+                <h3 class="text-2xl font-bold text-green-700 mb-4 text-readable">Ejes Temáticos Destacados</h3>
+                <p class="text-gray-800 mb-6">Nuestras capacitaciones se centran en problemáticas y abordajes de alta relevancia para nuestra provincia, garantizando que el contenido sea directamente aplicable a su práctica diaria. Los temas principales incluyen, entre otros:</p>
+                <div class="space-y-4">
+                    <div class="p-4 rounded-lg border border-orange-500/50">
+                        <h4 class="font-bold text-orange-700">Rehabilitación Pediátrica:</h4>
+                        <p class="text-gray-800">Exploración de las últimas técnicas, enfoques interdisciplinarios y estudios de caso en la atención de la población infantil.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border border-orange-500/50">
+                        <h4 class="font-bold text-orange-700">Abordaje de Patologías Prevalentes en San Luis:</h4>
+                        <p class="text-gray-800">Profundización en estrategias terapéuticas, guías de práctica clínica y manejo integral de las condiciones más frecuentes en nuestra región, ofreciendo herramientas efectivas y basadas en la evidencia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <h3 class="text-2xl font-bold text-green-700 mb-4 text-readable">¿Por Qué Formarse con CERPRE?</h3>
+                <ul class="list-disc list-inside space-y-3 text-gray-800">
+                    <li><span class="font-semibold">Certificación Oficial:</span> Todas nuestras jornadas otorgan certificación con el aval del Ministerio de Salud de la Provincia de San Luis, añadiendo un valor tangible a su desarrollo profesional.</li>
+                    <li><span class="font-semibold">Flexibilidad Absoluta:</span> Participe desde cualquier lugar de la provincia. Nuestro formato virtual está diseñado para integrarse a su agenda sin interferir con sus compromisos laborales.</li>
+                    <li><span class="font-semibold">Contenido Relevante y Práctico:</span> Olvídese de la teoría genérica. Nos enfocamos en las necesidades y desafíos específicos de la práctica de la rehabilitación en San Luis.</li>
+                    <li><span class="font-semibold">Acceso a Expertos:</span> El programa es coordinado por la dirección del centro y dictado por especialistas referentes en cada área.</li>
+                    <li><span class="font-semibold">Comunidad Profesional:</span> Genere lazos y comparta experiencias con colegas de toda la provincia en un espacio de aprendizaje colaborativo.</li>
+                </ul>
+            </div>
+
+            <div class="mt-8 border-l-4 border-orange-500 p-6 rounded-r-lg">
+                <h3 class="text-2xl font-bold text-orange-800 mb-4 text-readable">Proceso de Inscripción y Contacto</h3>
+                <p class="text-gray-800 mb-4">Para garantizar una experiencia enriquecedora y personalizada, las inscripciones se gestionan a demanda con un <span class="font-bold">cupo limitado de 99 profesionales por jornada.</span></p>
+                <ol class="list-decimal list-inside space-y-2 text-gray-800 mb-4">
+                    <li><span class="font-semibold">Primer Contacto:</span> Los profesionales interesados deben comunicarse directamente con el Director del centro, Dr. Diego Gandara, a través de su correo electrónico o teléfono para manifestar su interés.</li>
+                    <li><span class="font-semibold">Inscripción Formal:</span> Una vez establecido el contacto inicial, se le enviará un formulario web personal para completar la inscripción formal a las jornadas de su interés.</li>
+                </ol>
+                <p class="text-gray-900 font-semibold">Para iniciar su proceso de inscripción, por favor contacte a:</p>
+                <p class="text-gray-800 mt-2">Director: Dr. Diego Gandara</p>
+                <p class="text-gray-800">Email: <a href="mailto:drdiegogandaraa@gmail.com" class="text-green-600 hover:underline font-semibold">drdiegogandaraa@gmail.com</a></p>
+                <p class="text-gray-800">Teléfono: <a href="tel:3516328914" class="text-green-600 hover:underline font-semibold">3516328914</a></p>
+                <p class="mt-4 text-lg font-bold text-orange-900 text-readable">¡Eleve su práctica profesional y sea parte de la vanguardia en rehabilitación de San Luis. Contáctenos hoy para asegurar su lugar!</p>
+            </div>
         </section>
 
-        <!-- Sección Derecha: Enlaces Web -->
-        <aside class="w-full lg:w-1/3 bg-slate-100/80 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-200">
-            <h2 class="text-2xl sm:text-3xl font-bold text-sky-800 mb-6">Centros de Rehabilitación Destacados</h2>
-            <ul class="space-y-4">
-                <li>
-                    <a href="https://www.fleni.org.ar/rehabilitacion/" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-800 hover:underline text-lg transition-colors duration-200">
-                        <span class="font-semibold">FLENI (Argentina)</span> - Instituto de Investigaciones Neurológicas Dr. Raúl Carrea
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.ineco.org.ar/rehabilitacion/" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-800 hover:underline text-lg transition-colors duration-200">
-                        <span class="font-semibold">INECO (Argentina)</span> - Instituto de Neurología Cognitiva
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.rehab.org/" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-800 hover:underline text-lg transition-colors duration-200">
-                        <span class="font-semibold">Shirley Ryan AbilityLab (USA)</span> - Anteriormente RIC
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.spauldingski.org/" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-800 hover:underline text-lg transition-colors duration-200">
-                        <span class="font-semibold">Spaulding Rehabilitation Hospital (USA)</span> - Harvard Medical School Affiliate
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.nationalrehab.ie/" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-800 hover:underline text-lg transition-colors duration-200">
-                        <span class="font-semibold">National Rehabilitation Hospital (Ireland)</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.kesslerfoundation.org/" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-800 hover:underline text-lg transition-colors duration-200">
-                        <span class="font-semibold">Kessler Foundation (USA)</span> - Research and Rehabilitation
-                    </a>
-                </li>
-            </ul>
-        </aside>
+        <!-- Sección Central: Calendario Interactivo -->
+        <section class="w-full max-w-4xl mx-auto mt-8 p-8 rounded-xl">
+            <h2 class="text-2xl sm:text-3xl font-bold text-orange-600 mb-6 text-center text-readable">Calendario de Capacitaciones 2026</h2>
+            <div id="calendar-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Los meses del calendario serán generados aquí por JavaScript -->
+            </div>
+        </section>
 
     </main>
 
-    <!-- Sección Central: Calendario Interactivo -->
-    <section class="w-full max-w-4xl mt-8 bg-slate-100/80 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-200">
-        <h2 class="text-2xl sm:text-3xl font-bold text-sky-800 mb-6 text-center">Calendario de Capacitaciones 2026</h2>
-        <div id="calendar-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Los meses del calendario serán generados aquí por JavaScript -->
-        </div>
-    </section>
-
-    <footer class="w-full max-w-6xl mt-10 p-6 bg-teal-500 text-white text-center rounded-xl shadow-lg">
+    <footer class="w-full max-w-6xl mt-10 p-6 bg-gradient-to-r from-yellow-400 via-orange-500 to-green-500 text-white text-center rounded-xl shadow-lg">
         <p class="text-lg">
-            Contacto: <a href="mailto:drdiegogandara@gmail.com" class="text-teal-100 hover:text-white hover:underline">drdiegogandara@gmail.com</a>
+            Contacto: <a href="mailto:drdiegogandaraa@gmail.com" class="text-white hover:underline font-semibold">drdiegogandaraa@gmail.com</a>
         </p>
         <p class="text-md">
-            Director CERPRE - Centro de Referencia Provincial en Rehabilitación
+            Director CERPRE - Dr. Diego Gandara
         </p>
     </footer>
 
@@ -133,42 +155,34 @@
             ];
             const dayNames = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
 
-            /**
-             * Genera el HTML para el calendario de un solo mes.
-             * @param {number} year El año (ej., 2026).
-             * @param {number} month El mes (0-11, donde 0 es Enero).
-             * @returns {string} Cadena HTML para el calendario del mes.
-             */
             function generateMonthCalendar(year, month) {
                 const firstDayOfMonth = new Date(year, month, 1);
                 const daysInMonth = new Date(year, month + 1, 0).getDate();
-                const startDay = firstDayOfMonth.getDay(); // 0 para Domingo, 1 para Lunes, etc.
+                const startDay = firstDayOfMonth.getDay();
 
                 let calendarHtml = `
-                    <div class="bg-white/80 p-6 rounded-lg shadow-md border border-gray-100">
-                        <h3 class="text-xl font-bold text-center text-teal-700 mb-4">${monthNames[month]} ${year}</h3>
-                        <div class="grid grid-cols-7 gap-1 text-sm font-medium text-gray-600 mb-2">
+                    <div class="p-6 rounded-lg shadow-md border border-gray-200/50 backdrop-blur-sm bg-white/30">
+                        <h3 class="text-xl font-bold text-center text-orange-700 mb-4">${monthNames[month]} ${year}</h3>
+                        <div class="grid grid-cols-7 gap-1 text-sm font-medium text-gray-700 mb-2">
                             ${dayNames.map(day => `<div class="text-center">${day}</div>`).join('')}
                         </div>
                         <div class="grid grid-cols-7 gap-1">
                 `;
 
-                // Añade celdas vacías para los días antes del 1ro del mes
                 for (let i = 0; i < startDay; i++) {
                     calendarHtml += `<div class="calendar-day inactive"></div>`;
                 }
 
-                // Añade los días del mes
                 for (let day = 1; day <= daysInMonth; day++) {
                     const currentDate = new Date(year, month, day);
-                    const isWednesday = currentDate.getDay() === 3; // Miércoles es 3 (0=Domingo)
+                    const isWednesday = currentDate.getDay() === 3;
                     const isCurrentMonth = currentDate.getMonth() === month;
 
                     let dayClasses = 'calendar-day';
                     if (isCurrentMonth) {
                         dayClasses += ' current-month';
                     }
-                    if (isWednesday && month >= 2) { // Solo desde Marzo (mes 2) en adelante
+                    if (isWednesday && month >= 2) {
                         dayClasses += ' wednesday';
                     }
 
@@ -179,25 +193,18 @@
                     `;
                 }
 
-                calendarHtml += `
-                        </div>
-                    </div>
-                `;
+                calendarHtml += `</div></div>`;
                 return calendarHtml;
             }
 
-            // Genera calendarios de Marzo a Diciembre de 2026
-            for (let month = 2; month < 12; month++) { // Mes 2 es Marzo
+            for (let month = 2; month < 12; month++) {
                 calendarContainer.innerHTML += generateMonthCalendar(2026, month);
             }
 
-            // Añade event listeners a todos los miércoles clickeables
             document.querySelectorAll('.calendar-day.wednesday').forEach(wednesdayDiv => {
                 wednesdayDiv.addEventListener('click', () => {
                     const date = wednesdayDiv.dataset.date;
                     if (date) {
-                        // En una aplicación real, podrías usar la fecha para obtener un enlace de Meet específico
-                        // Para este ejemplo, usamos un enlace genérico
                         window.open(meetLink, '_blank');
                         console.log(`Se hizo clic en el Miércoles ${date}. Abriendo enlace de Meet: ${meetLink}`);
                     }
