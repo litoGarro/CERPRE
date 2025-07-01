@@ -10,7 +10,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Divisi%C3%B3n_pol%C3%ADtica_de_la_Provincia_de_San_Luis_-Argentina-.jpg/640px-Divisi%C3%B3n_pol%C3%ADtica_de_la_Provincia_de_San_Luis_-Argentina-.jpg'); /* Placeholder for San Luis map */
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Divisi%C3%B3n_pol%C3%ADtica_de_la_Provincia_de_San_Luis_-Argentina-.jpg/640px-Divisi%C3%B3n_pol%C3%ADtica_de_la_Provincia_de_San_Luis_-Argentina-.jpg'); /* Mapa de San Luis */
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -19,7 +19,7 @@
             min-height: 100vh;
             color: #333;
         }
-        /* Overlay for watermark effect */
+        /* Capa para efecto de marca de agua */
         body::before {
             content: '';
             position: absolute;
@@ -27,23 +27,23 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(255, 255, 255, 0.85); /* Adjust opacity for watermark effect */
+            background-color: rgba(255, 255, 255, 0.85); /* Opacidad ajustada para el efecto */
             z-index: -1;
         }
         .calendar-day {
             @apply p-2 text-center border border-gray-200 rounded-md cursor-pointer transition-all duration-200;
         }
         .calendar-day:hover {
-            @apply bg-blue-100;
+            @apply bg-teal-100;
         }
         .calendar-day.current-month {
-            @apply bg-blue-50 text-blue-800;
+            @apply bg-teal-50 text-teal-800;
         }
         .calendar-day.wednesday {
-            @apply bg-green-200 text-green-800 font-semibold cursor-pointer shadow-md;
+            @apply bg-emerald-200 text-emerald-800 font-semibold cursor-pointer shadow-md;
         }
         .calendar-day.wednesday:hover {
-            @apply bg-green-300 transform scale-105;
+            @apply bg-emerald-300 transform scale-105;
         }
         .calendar-day.inactive {
             @apply text-gray-400 bg-gray-50 cursor-not-allowed;
@@ -52,51 +52,51 @@
 </head>
 <body class="flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8">
 
-    <header class="w-full max-w-6xl text-center mb-10 p-6 bg-blue-700 text-white rounded-xl shadow-lg">
+    <header class="w-full max-w-6xl text-center mb-10 p-6 bg-teal-500 text-white rounded-xl shadow-lg">
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Red de Rehabilitación en la Provincia de San Luis</h1>
     </header>
 
     <main class="w-full max-w-6xl flex flex-col lg:flex-row gap-8">
 
-        <!-- Left Section: Invitation Text -->
-        <section class="flex-1 bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-            <h2 class="text-2xl sm:text-3xl font-bold text-blue-800 mb-6">Invitación a Colaborar en Capacitación</h2>
+        <!-- Sección Izquierda: Texto de Invitación -->
+        <section class="flex-1 bg-slate-100/80 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-200">
+            <h2 class="text-2xl sm:text-3xl font-bold text-sky-800 mb-6">Invitación a colaborar en la Capacitación</h2>
             <p class="text-gray-700 leading-relaxed text-lg">
                 Se invita cordialmente a profesionales de la salud, tanto del ámbito público como privado, a participar en nuestras actividades de capacitación. Nuestro objetivo es informar sobre las últimas novedades y técnicas en rehabilitación, facilitando el acercamiento de la Salud Pública a todas las localidades de la provincia de San Luis. Juntos, podemos fortalecer la red de rehabilitación y mejorar la calidad de vida de nuestros ciudadanos. ¡Su conocimiento y experiencia son invaluables para esta iniciativa!
             </p>
         </section>
 
-        <!-- Right Section: Web Links -->
-        <aside class="w-full lg:w-1/3 bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-            <h2 class="text-2xl sm:text-3xl font-bold text-blue-800 mb-6">Centros de Rehabilitación Destacados</h2>
+        <!-- Sección Derecha: Enlaces Web -->
+        <aside class="w-full lg:w-1/3 bg-slate-100/80 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-200">
+            <h2 class="text-2xl sm:text-3xl font-bold text-sky-800 mb-6">Centros de Rehabilitación Destacados</h2>
             <ul class="space-y-4">
                 <li>
-                    <a href="https://www.fleni.org.ar/rehabilitacion/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline text-lg transition-colors duration-200">
+                    <a href="https://www.fleni.org.ar/rehabilitacion/" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-800 hover:underline text-lg transition-colors duration-200">
                         <span class="font-semibold">FLENI (Argentina)</span> - Instituto de Investigaciones Neurológicas Dr. Raúl Carrea
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.ineco.org.ar/rehabilitacion/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline text-lg transition-colors duration-200">
+                    <a href="https://www.ineco.org.ar/rehabilitacion/" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-800 hover:underline text-lg transition-colors duration-200">
                         <span class="font-semibold">INECO (Argentina)</span> - Instituto de Neurología Cognitiva
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.rehab.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline text-lg transition-colors duration-200">
+                    <a href="https://www.rehab.org/" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-800 hover:underline text-lg transition-colors duration-200">
                         <span class="font-semibold">Shirley Ryan AbilityLab (USA)</span> - Anteriormente RIC
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.spauldingski.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline text-lg transition-colors duration-200">
+                    <a href="https://www.spauldingski.org/" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-800 hover:underline text-lg transition-colors duration-200">
                         <span class="font-semibold">Spaulding Rehabilitation Hospital (USA)</span> - Harvard Medical School Affiliate
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.nationalrehab.ie/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline text-lg transition-colors duration-200">
+                    <a href="https://www.nationalrehab.ie/" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-800 hover:underline text-lg transition-colors duration-200">
                         <span class="font-semibold">National Rehabilitation Hospital (Ireland)</span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.kesslerfoundation.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline text-lg transition-colors duration-200">
+                    <a href="https://www.kesslerfoundation.org/" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-800 hover:underline text-lg transition-colors duration-200">
                         <span class="font-semibold">Kessler Foundation (USA)</span> - Research and Rehabilitation
                     </a>
                 </li>
@@ -105,17 +105,17 @@
 
     </main>
 
-    <!-- Center Section: Interactive Calendar -->
-    <section class="w-full max-w-4xl mt-8 bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-        <h2 class="text-2xl sm:text-3xl font-bold text-blue-800 mb-6 text-center">Calendario de Capacitaciones 2026</h2>
+    <!-- Sección Central: Calendario Interactivo -->
+    <section class="w-full max-w-4xl mt-8 bg-slate-100/80 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-200">
+        <h2 class="text-2xl sm:text-3xl font-bold text-sky-800 mb-6 text-center">Calendario de Capacitaciones 2026</h2>
         <div id="calendar-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Calendar months will be generated here by JavaScript -->
+            <!-- Los meses del calendario serán generados aquí por JavaScript -->
         </div>
     </section>
 
-    <footer class="w-full max-w-6xl mt-10 p-6 bg-blue-700 text-white text-center rounded-xl shadow-lg">
+    <footer class="w-full max-w-6xl mt-10 p-6 bg-teal-500 text-white text-center rounded-xl shadow-lg">
         <p class="text-lg">
-            Contacto: <a href="mailto:drdiegogandara@gmail.com" class="text-blue-200 hover:text-blue-50 hover:underline">drdiegogandara@gmail.com</a>
+            Contacto: <a href="mailto:drdiegogandara@gmail.com" class="text-teal-100 hover:text-white hover:underline">drdiegogandara@gmail.com</a>
         </p>
         <p class="text-md">
             Director CERPRE - Centro de Referencia Provincial en Rehabilitación
@@ -125,7 +125,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const calendarContainer = document.getElementById('calendar-container');
-            const meetLink = "https://meet.google.com/xyz-abcd-efg"; // Placeholder Meet link
+            const meetLink = "https://meet.google.com/xyz-abcd-efg"; // Enlace de Meet de ejemplo
 
             const monthNames = [
                 "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
@@ -134,41 +134,41 @@
             const dayNames = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
 
             /**
-             * Generates the HTML for a single month's calendar.
-             * @param {number} year The year (e.g., 2026).
-             * @param {number} month The month (0-11, where 0 is January).
-             * @returns {string} HTML string for the month's calendar.
+             * Genera el HTML para el calendario de un solo mes.
+             * @param {number} year El año (ej., 2026).
+             * @param {number} month El mes (0-11, donde 0 es Enero).
+             * @returns {string} Cadena HTML para el calendario del mes.
              */
             function generateMonthCalendar(year, month) {
                 const firstDayOfMonth = new Date(year, month, 1);
                 const daysInMonth = new Date(year, month + 1, 0).getDate();
-                const startDay = firstDayOfMonth.getDay(); // 0 for Sunday, 1 for Monday, etc.
+                const startDay = firstDayOfMonth.getDay(); // 0 para Domingo, 1 para Lunes, etc.
 
                 let calendarHtml = `
-                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                        <h3 class="text-xl font-bold text-center text-blue-700 mb-4">${monthNames[month]} ${year}</h3>
+                    <div class="bg-white/80 p-6 rounded-lg shadow-md border border-gray-100">
+                        <h3 class="text-xl font-bold text-center text-teal-700 mb-4">${monthNames[month]} ${year}</h3>
                         <div class="grid grid-cols-7 gap-1 text-sm font-medium text-gray-600 mb-2">
                             ${dayNames.map(day => `<div class="text-center">${day}</div>`).join('')}
                         </div>
                         <div class="grid grid-cols-7 gap-1">
                 `;
 
-                // Add empty cells for days before the 1st of the month
+                // Añade celdas vacías para los días antes del 1ro del mes
                 for (let i = 0; i < startDay; i++) {
                     calendarHtml += `<div class="calendar-day inactive"></div>`;
                 }
 
-                // Add days of the month
+                // Añade los días del mes
                 for (let day = 1; day <= daysInMonth; day++) {
                     const currentDate = new Date(year, month, day);
-                    const isWednesday = currentDate.getDay() === 3; // Wednesday is 3 (0=Sunday)
+                    const isWednesday = currentDate.getDay() === 3; // Miércoles es 3 (0=Domingo)
                     const isCurrentMonth = currentDate.getMonth() === month;
 
                     let dayClasses = 'calendar-day';
                     if (isCurrentMonth) {
                         dayClasses += ' current-month';
                     }
-                    if (isWednesday && month >= 2) { // Only from March (month 2) onwards
+                    if (isWednesday && month >= 2) { // Solo desde Marzo (mes 2) en adelante
                         dayClasses += ' wednesday';
                     }
 
@@ -186,20 +186,20 @@
                 return calendarHtml;
             }
 
-            // Generate calendars for March to December 2026
-            for (let month = 2; month < 12; month++) { // Month 2 is March
+            // Genera calendarios de Marzo a Diciembre de 2026
+            for (let month = 2; month < 12; month++) { // Mes 2 es Marzo
                 calendarContainer.innerHTML += generateMonthCalendar(2026, month);
             }
 
-            // Add event listeners to all clickable Wednesdays
+            // Añade event listeners a todos los miércoles clickeables
             document.querySelectorAll('.calendar-day.wednesday').forEach(wednesdayDiv => {
                 wednesdayDiv.addEventListener('click', () => {
                     const date = wednesdayDiv.dataset.date;
                     if (date) {
-                        // In a real application, you might use the date to fetch a specific Meet link
-                        // For this example, we use a generic placeholder
+                        // En una aplicación real, podrías usar la fecha para obtener un enlace de Meet específico
+                        // Para este ejemplo, usamos un enlace genérico
                         window.open(meetLink, '_blank');
-                        console.log(`Clicked on Wednesday ${date}. Opening Meet link: ${meetLink}`);
+                        console.log(`Se hizo clic en el Miércoles ${date}. Abriendo enlace de Meet: ${meetLink}`);
                     }
                 });
             });
